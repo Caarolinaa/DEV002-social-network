@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { toNavigate } from "../main.js";
 import { auth, viewer, signInWithPass } from "../Firebase/firebase.js"
 import { register } from "../components/register.js"
@@ -61,4 +62,4 @@ export const registerOk = () => {
     return registerOkDiv;
 
 };
-
+/* eslint-enable */

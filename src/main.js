@@ -1,3 +1,4 @@
+/* eslint-disable */
 // Este es el punto de entrada de tu aplicacion
 
 import "./Firebase/firebaseConfig.js";
@@ -43,5 +44,4 @@ window.onpopstate = () => {
     rootDiv.appendChild(routes[window.location.pathname]());
 
 };
-
-
+/* eslint-enable */

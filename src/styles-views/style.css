@@ -85,10 +85,10 @@
 }
 
 .inputs:focus {
-  border:2px solid #03a678;
+  border: 2px solid #03a678;
   transform: scale(1.05);
   outline: none;
-  }
+}
 
 .buttons {
   width: 270px;
@@ -222,7 +222,6 @@
     border-radius: 40px;
     font-size: 20px;
     gap: 30px;
-    ;
   }
 
   .buttons {

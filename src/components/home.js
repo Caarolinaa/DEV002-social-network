@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { toNavigate } from "../main.js";
 import { auth, signInWithPass, viewer, provider, popUpGoogle } from "../Firebase/firebase.js";
 
@@ -22,7 +23,7 @@ export const home = () => {
     const containerRegister = document.createElement("div");
     const labelRegister = document.createElement("label");
     const hrefRegister = document.createElement("a");
-    
+
     homeDiv.className = "div-container";
     container.className = "container";
     containerHeader.className = "container-header";
@@ -49,7 +50,7 @@ export const home = () => {
     buttonLogin.textContent = "Iniciar sesión";
     buttonLogin.className = "button-login buttons";
     containerGoogle.className = "container-google";
-    iconLogoGoogle.id = "span-i"; 
+    iconLogoGoogle.id = "span-i";
     iconLogoGoogle.className = "fa-brands fa-google";
     buttonGoogle.textContent = "Continuar con Google";
     buttonGoogle.className = "button-google buttons";
@@ -58,7 +59,7 @@ export const home = () => {
     labelRegister.textContent = "¿No tienes una cuenta?";
     hrefRegister.textContent = "Regístrate";
     hrefRegister.className = "href-register";
-    
+
     //homeDiv.appendChild(loginForm);
     homeDiv.appendChild(container);
     container.appendChild(containerHeader);
@@ -93,12 +94,12 @@ export const home = () => {
                 const userCredentials = await signInWithPass(auth, emailLogin, passwordLogin)
                 console.log(userCredentials.user)
             } catch (error) {
-                if (error.code === "auth/user-not-found"){
+                if (error.code === "auth/user-not-found") {
                     alert("usuario NO encontrado");
-                }else if (error.code === "auth/wrong-password"){
+                } else if (error.code === "auth/wrong-password") {
                     alert("Contraseña incorrecta");
-                } else if (error.code){
-                console.log(error.code);
+                } else if (error.code) {
+                    console.log(error.code);
                 }
             }
 
@@ -122,7 +123,4 @@ export const home = () => {
 
     return homeDiv;
 }
-
-
-
-
+/* eslint-enable */

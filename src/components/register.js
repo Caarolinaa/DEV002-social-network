@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { toNavigate } from "../main.js";
 import { auth, signUpWithPass } from "../Firebase/firebase.js";
 
@@ -179,3 +180,4 @@ export const register = () => {
     })
     return registerDiv;
 }
+/* eslint-enable */

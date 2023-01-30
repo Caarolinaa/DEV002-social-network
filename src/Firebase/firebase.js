@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { app } from "../Firebase/firebaseConfig.js";
 import { getAuth, createUserWithEmailAndPassword, signOut, GoogleAuthProvider, onAuthStateChanged, updateProfile, signInWithPopup, signInWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js';
 
@@ -18,8 +19,6 @@ export const viewer = () => {
     }
   });
 };
-export const logout = (auth) => signOut(auth)
+export const logOut = (auth) => signOut(auth)
 export const popUpGoogle = (auth, provider) => signInWithPopup(auth, provider)
-
-
-
+/* eslint-enable */

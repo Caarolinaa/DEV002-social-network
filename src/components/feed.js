@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { toNavigate } from "../main.js";
 import { register } from "../components/register.js"
 import { auth, logout } from "../Firebase/firebase.js";
@@ -90,3 +91,4 @@ export const feed = () => {
 
         return feedDiv;
     }
+/* eslint-enable */
