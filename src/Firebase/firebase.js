@@ -1,24 +1,26 @@
 /* eslint-disable */
-import { app } from "../Firebase/firebaseConfig.js";
-import { getAuth, createUserWithEmailAndPassword, signOut, GoogleAuthProvider, onAuthStateChanged, updateProfile, signInWithPopup, signInWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js';
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js';
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  signOut,
+  GoogleAuthProvider,
+  signInWithPopup,
+  signInWithEmailAndPassword
+} from 'https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js';
 
+import { firebaseConfig } from './firebaseConfig.js';
+
+export const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 export const provider = new GoogleAuthProvider();
 
-//Crear Usuario
-export const signUpWithPass = (auth, email, password) => createUserWithEmailAndPassword(auth, email, password)
-export const signInWithPass = (auth, email, password) => signInWithEmailAndPassword(auth, email, password)
-export const viewer = () => {
-  onAuthStateChanged(auth, (user) => {
-    if (user) {
-      // currentUser.email = user.email;
-      // currentUser.uid = user.uid;
-      console.log("user logged in " + user.email)
-    } else {
-      console.log("user logged out ")
-    }
-  });
+export {
+  createUserWithEmailAndPassword,
+  signOut,
+  GoogleAuthProvider,
+  signInWithPopup,
+  signInWithEmailAndPassword,
 };
-export const logOut = (auth) => signOut(auth)
-export const popUpGoogle = (auth, provider) => signInWithPopup(auth, provider)
+
 /* eslint-enable */

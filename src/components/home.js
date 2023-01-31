@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { toNavigate } from "../main.js";
-import { auth, signInWithPass, viewer, provider, popUpGoogle } from "../Firebase/firebase.js";
+import { auth, signInWithPass, viewer, provider, popUpGoogle } from "../firebase/firebase.js";
 
 export const home = () => {
     //Creamos elementos del Formulario

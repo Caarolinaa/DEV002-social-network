@@ -1,18 +1,18 @@
 /* eslint-disable */
 import { toNavigate } from "../main.js";
 import { register } from "../components/register.js"
-import { auth, logout } from "../Firebase/firebase.js";
+import { auth, logout } from "../firebase/firebase.js";
 
 export const feed = () => {
     //Creamos elementos del Feed
     const feedDiv = document.createElement("div");
     feedDiv.classList = "feedDiv"
     const header = document.createElement("div");
-    
+
     const imgHeader = document.createElement("img");
     imgHeader.src = "../img/Logo VeganShip.png"
     imgHeader.classList = "imgHeader"
-    
+
     const inputSearchHeader = document.createElement("input");
     inputSearchHeader.placeholder = "tu búsqueda"
 
@@ -74,21 +74,21 @@ export const feed = () => {
     postContentContainer.appendChild(postTag);
     postContentContainer.appendChild(postContent);
     postContentContainer.appendChild(likeButton);
-    
 
-    
+
+
 
     buttonSignOut.addEventListener("click", () => toNavigate("/"));
     buttonSignOut.addEventListener("click", async (e) => {
-            e.preventDefault() //cancela comportamiento por defecto de refrescar la pagina
-            try {
-                await logout(auth)
-            } catch (error) {
-                console.log(error)
-            }
-            toNavigate("/");
-        })
+        e.preventDefault() //cancela comportamiento por defecto de refrescar la pagina
+        try {
+            await logout(auth)
+        } catch (error) {
+            console.log(error)
+        }
+        toNavigate("/");
+    })
 
-        return feedDiv;
-    }
+    return feedDiv;
+}
 /* eslint-enable */

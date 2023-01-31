@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { toNavigate } from "../main.js";
-import { auth, signUpWithPass } from "../Firebase/firebase.js";
+import { auth, signUpWithPass } from "../firebase/firebase.js";
 
 export const register = () => {
     //Creamos elementos de para el formulario de registro
@@ -124,7 +124,7 @@ export const register = () => {
 
     labelSelectVegan.className = "label-user-select";
     labelSelectVegan.textContent = "¿Eres vegano?";
-    
+
     buttonRegister.className = "button-Register";
     buttonRegister.textContent = "Crear cuenta";
 
@@ -136,7 +136,7 @@ export const register = () => {
     containerRegisterForm.appendChild(registerForm);
 
 
-    
+
     registerForm.appendChild(labelUserName);
     registerForm.appendChild(inputUserName);
     registerForm.appendChild(labelUserCity);
@@ -175,7 +175,7 @@ export const register = () => {
                 }
             }
 
-            
+
         })
     })
     return registerDiv;
