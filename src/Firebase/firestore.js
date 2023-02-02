@@ -7,8 +7,8 @@ import {
 	collection,
 	deleteDoc,
 	doc,
-	updateDoc,
 	getDoc,
+	updateDoc,
 } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js";
 
 export const userCollection = collection(db, "usuarios"); //Guardar el usuario que se está creando al momento de registarar.
@@ -28,7 +28,7 @@ export const onGetPosts = (callback) => onSnapshot(postCollection, callback);
 
 export const deletePost = (id) => deleteDoc(doc(db, "posts", id));
 
+export const getPost = (id) => getDoc(doc(db, "posts", id));
+
 export const updatePost = (id, newDocPost) =>
 	updateDoc(doc(db, "posts", id), newDocPost);
-
-export const getPost = (id) => getDoc(doc(db, "posts", id));
