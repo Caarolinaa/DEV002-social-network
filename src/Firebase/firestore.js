@@ -12,7 +12,7 @@ import {
 	addDoc,
 	onSnapshot,
 } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js";
-import { auth } from "./firebase.js";
+import { auth } from "../Firebase/firebase.js";
 
 export const userCollection = () => getDocs(collection(db, "usuarios"));
 export const postCollection = () => getDocs(collection(db, "posts"));
