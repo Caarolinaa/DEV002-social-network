@@ -11,7 +11,7 @@
 * [5. Historias de Usuarios](#5-historias-de-usuarios)
 * [6. Diseño de la Interfaz de Usuario](#6-diseño-de-la-interfaz-de-usuario)
 
-##1.¿Que es una Red Social?
+## 1.¿Que es una Red Social?
 
 Es una estructura social formada por personas que comparten intereses similares y/o valores comunes. El principal propósito es el de conectar a personas.
 
