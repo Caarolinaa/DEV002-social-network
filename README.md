@@ -1,6 +1,6 @@
 # Proyecto Red Social
 
-#Veganship
+# Veganship
 
 ## Índice
 
