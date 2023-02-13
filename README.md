@@ -53,6 +53,3 @@ Desarrollamos las Historias de Usuario en base a las necesidades que pudimos obs
 
 ![prototipo1](src/img/prototipo1.png)
 ![prototipo2](src/img/prototipo2.png)
-
-### ***Prototipo Final***
-
